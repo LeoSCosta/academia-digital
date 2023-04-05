@@ -30,7 +30,7 @@ public class AlunoController {
     @PostMapping
     public Aluno create (@RequestBody AlunoForm form){
         Aluno aluno = service.create(form);
-        matriculaService.create(aluno.getId());
+        matriculaService.create(aluno);
         return aluno;
     }
 

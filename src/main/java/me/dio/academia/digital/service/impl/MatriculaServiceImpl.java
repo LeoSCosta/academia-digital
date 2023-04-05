@@ -20,6 +20,7 @@ public class MatriculaServiceImpl implements IMatriculaService {
     public Matricula create(Aluno aluno) {
         Matricula matricula = new Matricula();
         matricula.setAluno(aluno);
+        matriculaRepository.save(matricula);
         return matricula;
     }
 
